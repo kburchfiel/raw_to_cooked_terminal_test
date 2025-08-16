@@ -49,10 +49,6 @@ void type_phrase(std::string gameplay_option)
     
     std::string user_string;
 
-    // Clearing the terminal in order to prepare for the typing 
-    // test:
-    // Term::Cursor cursor{Term::cursor_position()};
-    // Term::Screen term_size{Term::screen_size()};
     // // Clearing the console and displaying the verse to type:
     Term::cout << Term::clear_screen() << Term::terminal.clear() 
         << Term::cursor_move(
@@ -77,11 +73,8 @@ void type_phrase(std::string gameplay_option)
         case Term::Event::Type::Key:
         {
             Term::Key key(event);
-            // Creating a timer following this keypress:
-            // (This will be useful for timing how long it took the user
-            // to type each individual word.)
-            std::string char_to_add = ""; // This default setting will
-            // be used in certain special keypress cases (including Backspace)
+
+            std::string char_to_add = ""; 
             std::string keyname = key.name();
                 if (keyname == "Space")
             {
