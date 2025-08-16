@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.5)
+project(rtctt)
+set(CMAKE_CXX_STANDARD 20)
+option(BUILD_SHARED_LIBS "Build using shared libraries" OFF)
+add_subdirectory(/home/kjb3/D1V1/Documents/!Dell64docs/Programming/CPP/third_party_libraries/cpp-terminal-master /home/kjb3/D1V1/Documents/!Dell64docs/Programming/CPP/third_party_libraries/cpp-terminal-master_subdiroutput)
+add_executable(rtctt raw_to_cooked_terminal_test.cpp)
+target_link_libraries(rtctt cpp-terminal)
